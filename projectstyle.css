@@ -1,0 +1,31 @@
+.databox{
+	border: 1px solid LightGray;
+	color : rgb(60,60,60);
+	border-radius: 5px;
+	box-shadow: 10px 10px 5px LightGray;
+	padding-left: 10px;
+	padding-right: : 10px;
+	padding-top: 5px;
+	margin: 10px;
+
+}
+.foot{
+	left:0;
+	bottom: 0;
+	font-size: 25px;
+	width: 100%;
+	position: fixed;
+	text-align: center;
+	background-color: #333;
+	transition: 0.3s;
+}
+.foot a, .foot a:visited, .foot a:active{
+	text-decoration: none;
+	color:white;
+}
+
+.foot a:hover{
+	text-decoration: none;
+	color:white;
+	font-size: 30px;
+}
