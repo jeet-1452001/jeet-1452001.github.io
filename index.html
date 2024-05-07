@@ -1,44 +1,427 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-	<title>Jeet Pandya</title>
-	<link rel="stylesheet" type="text/css" href="homestyle.css">
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Jeet Pandya | Portfolio</title>
 </head>
-<body style="font-family: 'Montserrat', sans-serif; font-weight: bolder; ">
-	
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-     <i class="fa fa-code" style="font-size: 48px;color: red"></i>&nbsp;&nbsp;&nbsp;
+
+<body class="bg-gray-900">
+  <header class="text-gray-400 bg-gray-900 body-font">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-500 rounded-full"
+          viewBox="0 0 24 24">
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+        </svg>
+        <span class="ml-3 text-xl">Jeet - Portfolio</span>
+      </a>
+      <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
+        <a class="mr-5 hover:text-white" href="#">Home</a>
+        <a class="mr-5 hover:text-white" href="#about">About</a>
+        <a class="mr-5 hover:text-white" href="#experience">Porfolio</a>
+        <a class="mr-5 hover:text-white" href="#contact">Contact</a>
+      </nav>
+      <button
+        class="inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0" onclick="downloadResume()"> Get
+        My Resume
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          class="w-4 h-4 ml-1" viewBox="0 0 24 24">
+          <path d="M5 12h14M12 5l7 7-7 7"></path>
+        </svg>
+      </button>
     </div>
-    <ul class="nav navbar-nav" style="font-size: 17px">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="projects.html">My Projetcs</a></li>
-      <li><a href="about.html">About Me</a></li>
-    </ul>
-  </div>
-</nav>
-<div class="container-fluid" style="margin-top: 10%;margin-left: 10%">
-	  <span style="font-size:30px">Hello,&nbsp;My Name is</span> <br>      
-	  <span style="color: red;font-size:60px">Jeet Pandya</span> <br>      
-  <p style="font-size: 30px">And i'm a <span style="color: red;">Student.</span></p> <br>
-  <a href="about.html"><button class="contactme">Contact Me <i class="fa fa-arrow-right"></i></button></a>
-</div>
+  </header>
+  <section id="hero"
+    class="min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
+    <!-- image - start -->
+    <img src="https://images.unsplash.com/photo-1618004652321-13a63e576b80?auto=format&q=75&fit=crop&w=1500"
+      loading="lazy" alt="Photo by Fakurian Design" class="absolute inset-0 h-full w-full object-cover object-center" />
+    <!-- image - end -->
 
-<div class="foot" >
-	<a href="mailto:jeetpandya11124@gmail.com"><span><i class="fa fa-envelope"></i></span></a> &nbsp; &nbsp;
-	<a href="https://www.linkedin.com/in/jeet-pandya-lin1452001" target="_blank"><span><i class="fa fa-linkedin"></i></span></a>&nbsp; &nbsp;
-	<a href="https://www.instagram.com/_jeetpandya._/" target="_blank"><span><i class="fa fa-instagram"></i></span></a> &nbsp; &nbsp;
+    <!-- overlay - start -->
+    <div class="absolute inset-0 bg-blue-500 mix-blend-multiply"></div>
+    <!-- overlay - end -->
 
-</div>
+    <!-- text start -->
+    <div class="relative flex flex-col items-center p-4 sm:max-w-xl">
+      <p class="mb-4 text-center text-4xl text-white sm:text-5xl md:mb-8 typing">I'm Jeet Pandya</p>
+      <h1 class="mb-8 text-center text-xl font-bold text-indigo-200 sm:text-2xl md:mb-12 md:text-2xl">Full-Stack
+        Software Developer</h1>
+
+      <div class="flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center">
+        <a href="https://www.linkedin.com/in/jeetpandya/" target="_blank"
+          class="inline-block rounded-lg bg-gray-200 px-6 py-2 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">
+          <i class="fa fa-linkedin m-1 text-blue-900 logoBtn" style="font-size: 32px;vertical-align: middle;"></i></a>
+        <a href="#about"
+          class="inline-block rounded-lg bg-gray-200 px-6 py-2 text-center text-sm font-bold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">Know
+          More <br> <i class="fa fa-angle-double-down logoBtn" style="font-size: 24px;"></i></a>
+        <a href="https://github.com/jeet-1452001" target="_blank"
+          class="inline-block rounded-lg bg-gray-200 px-6 py-2 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">
+          <i class="fa fa-github m-1 text-black logoBtn" style="font-size: 32px;"></i></a>
+      </div>
+    </div>
+    <!-- text end -->
+  </section>
+  <section id="about" class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-24 mx-auto">
+      <p class="mb-4 text-center text-4xl text-white sm:text-5xl md:mb-8">About me</p>
+      <div class="xl:w-3/4 lg:w-3/4 w-full mx-auto text-justify">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-500 mb-8"
+          viewBox="0 0 975.036 975.036">
+          <path
+            d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z">
+          </path>
+        </svg>
+        <p class="leading-relaxed text-lg">
+          Hello World! 🌍 <br>
+          I'm Jeet, a wizard at the mystical art of software engineering, currently refining my spell-casting skills as
+          a graduate student at McMaster University. By day, I'm a humble student, but by night, I become a master of
+          code, conjuring up dazzling front-ends and robust back-ends using the latest tech incantations.
+          <br>Armed with a wand (okay, it’s just a keyboard), I craft magical realms in HTML, CSS, and JavaScript,
+          sprinkle some Vue.js and React.js for that extra sparkle, and stabilize the cauldron with hearty brews of
+          .NET, Node.js, Python, and PHP on the back-end.
+          <br>My treasure trove (read: database skills) includes the mystical stones of MySQL, the enchanted forests of
+          MongoDB, and the ever-burning fires of Firebase.
+          <br>Navigating through the realms of Git and deploying armies with Azure DevOps, I ensure that my creations
+          are not just figments of imagination but living, breathing applications that serve the mortal kind.
+          <br>Seeking to join a guild (a.k.a. a technology-driven firm) where my skills can be put to the ultimate test,
+          and where the quests are as challenging as they are rewarding.
+          <br>Ready for an adventure? Let’s code something awesome together!
+
+          <a href="#contact"><u>Send a message!</u></a>
+        </p>
+        <span class="inline-block h-1 w-10 rounded bg-blue-500 mt-8 mb-6"></span>
+        <h2 class="text-white font-medium title-font tracking-wider text-sm">Jeet Pandya</h2>
+        <p class="text-gray-500">Software developer</p>
+      </div>
+    </div>
+  </section>
+  <section id="experience" class="text-gray-400 bg-gray-900 body-font overflow-hidden">
+    <p class="mb-4 text-center text-4xl text-white sm:text-5xl md:mb-8">Professional Experience</p>
+
+    <div class="container px-20 py-20 mx-auto">
+      <div class="-my-8 divide-y-2 divide-gray-800">
+        <div class="py-8 flex flex-wrap md:flex-nowrap">
+          <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+            <span class="font-semibold title-font text-white">FGF Brands Inc.</span>
+            <span class="mt-1 text-gray-500 text-sm">Sept 2023 - Present</span>
+          </div>
+          <div class="md:flex-grow">
+            <h2 class="text-2xl font-medium text-white title-font mb-2">Full Stack Software Developer</h2>
+            <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up
+              snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha
+              lumbersexual pork belly polaroid hoodie portland craft beer.</p>
+            <a class="text-blue-400 inline-flex items-center mt-4">Learn More
+              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="py-8 flex border-t-2 border-gray-800 flex-wrap md:flex-nowrap">
+          <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+            <span class="font-semibold title-font text-white">McMaster University</span>
+            <span class="mt-1 text-gray-500 text-sm">April 2022 - Nov 2022</span>
+          </div>
+          <div class="md:flex-grow">
+            <h2 class="text-2xl font-medium text-white title-font mb-2">Software Developer / Research Assistant - IV
+            </h2>
+            <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up
+              snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha
+              lumbersexual pork belly polaroid hoodie portland craft beer.</p>
+            <a class="text-blue-400 inline-flex items-center mt-4">Learn More
+              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="py-8 flex border-t-2 border-gray-800 flex-wrap md:flex-nowrap">
+          <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
+            <span class="font-semibold title-font text-white">MRI Software Inc.</span>
+            <span class="mt-1 text-gray-500 text-sm">May 2022 - Dec 2022</span>
+          </div>
+          <div class="md:flex-grow">
+            <h2 class="text-2xl font-medium text-white title-font mb-2">Software Engineer - I</h2>
+            <p class="leading-relaxed">Glossier echo park pug, church-key sartorial biodiesel vexillologist pop-up
+              snackwave ramps cornhole. Marfa 3 wolf moon party messenger bag selfies, poke vaporware kombucha
+              lumbersexual pork belly polaroid hoodie portland craft beer.</p>
+            <a class="text-blue-400 inline-flex items-center mt-4">Learn More
+              <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="text-gray-400 bg-gray-900 body-font">
+    <div class="container px-5 py-15 mx-auto">
+      <div class="text-center mb-20">
+        <p class="mb-4 text-center text-4xl text-white sm:text-5xl md:mb-8">Skills</p>
+      </div>
+      <div class="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-800 rounded flex flex-col p-4 h-full items-left">
+            <div class="flex">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                class="text-blue-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                <path d="M22 4L12 14.01l-3-3"></path>
+              </svg>
+              <span class="title-font font-medium text-white">Front-End</span>
+            </div>
+            <div class="flex mx-5 px-5">
+              <p>HTML5, CSS3, JavaScript, ReactJs, VueJs, jQuery, Bootstrap, TailwindCSS</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-800 rounded flex flex-col p-4 h-full items-left">
+            <div class="flex">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                class="text-blue-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                <path d="M22 4L12 14.01l-3-3"></path>
+              </svg>
+              <span class="title-font font-medium text-white">Back-End</span>
+            </div>
+            <div class="flex mx-5 px-5">
+              <p>REST APIs, Microservices, ASP.NET core and framework, Node Js, Python (Django, Flask)</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-800 rounded flex flex-col p-4 h-full items-left">
+            <div class="flex">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                class="text-blue-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                <path d="M22 4L12 14.01l-3-3"></path>
+              </svg>
+              <span class="title-font font-medium text-white">Database Systems</span>
+            </div>
+            <div class="flex mx-5 px-5">
+              <p>SQL(Microsoft SQL, PostgreSQL) , NoSQL(MongoDB, FireBase)</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-2 sm:w-1/2 w-full">
+          <div class="bg-gray-800 rounded flex flex-col p-4 h-full items-left">
+            <div class="flex">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+                class="text-blue-400 w-6 h-6 flex-shrink-0 mr-4" viewBox="0 0 24 24">
+                <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                <path d="M22 4L12 14.01l-3-3"></path>
+              </svg>
+              <span class="title-font font-medium text-white">Cloud Platforms / DevOps</span>
+            </div>
+            <div class="flex mx-5 px-5">
+              <p>Microsoft Azure, Google Cloud, CI/CD pipelines</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="https://calendar.app.google/t5zaXnkbvo8zA2iaA" target="_blank"><button
+          class="flex mx-auto mt-16 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Schedule
+          a call!</button>></a>
+    </div>
+  </section>
+
+  <section id="projects" class="py-6 sm:py-8 lg:py-12">
+    <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <p class="mb-4 text-center text-4xl text-white sm:text-5xl md:mb-8">Projects</p>
+      <div class="grid gap-4 sm:grid-cols-2 md:gap-6 lg:grid-cols-4 xl:grid-cols-4 px-3">
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
+            <img src="./statics/manage.png" loading="lazy" alt="Photo by Austin Wade"
+              class="absolute inset-0 h-full w-full object-scale-down bg-white object-top transition duration-200 group-hover:scale-110" />
+
+            <div class="relative flex w-full flex-col rounded-lg bg-white p-4 text-center">
+              <span class="text-lg font-bold text-gray-800 lg:text-xl">Hostel Managment System</span>
+              <span class="text-gray-500">HTML, CSS, Bootstrap, jQuery, .NET Core APIs, MySQL</span>
+            </div>
+          </a>
+        </div>
+        <!-- product - end -->
+
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
+            <img src="./statics/homely.png" loading="lazy" alt="Photo by engin akyurt"
+              class="absolute inset-0 h-full w-full object-scale-down bg-white object-top transition duration-200 group-hover:scale-110" />
+
+            <div class="relative flex w-full flex-col rounded-lg bg-white p-4 text-center">
+              <span class="text-lg font-bold text-gray-800 lg:text-xl">Homely Delight</span>
+              <span class="text-gray-500">React Js, Node Js, FireBase, Bootstrap CSS</span>
+            </div>
+          </a>
+        </div>
+        <!-- product - end -->
+
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
+            <img src="./statics/car.png" loading="lazy" alt="Photo by Austin Wade"
+              class="absolute inset-0 h-full w-full object-scale-down bg-white object-top transition duration-200 group-hover:scale-110" />
+
+            <div class="relative flex w-full flex-col rounded-lg bg-white p-4 text-center">
+              <span class="text-lg font-bold text-gray-800 lg:text-xl">Self driving car simulator</span>
+              <span class="text-gray-500">Python, OpenCV, Deep learning - CNN</span>
+            </div>
+          </a>
+        </div>
+        <!-- product - end -->
+
+        <!-- product - start -->
+        <div>
+          <a href="#" class="group relative flex h-96 items-end overflow-hidden rounded-lg bg-gray-100 p-4 shadow-lg">
+            <img src="./statics/ecom.png" loading="lazy" alt="Photo by Austin Wade"
+              class="absolute inset-0 h-full w-full object-scale-down bg-white object-top transition duration-200 group-hover:scale-110" />
+
+            <div class="relative flex w-full flex-col rounded-lg bg-white p-4 text-center">
+              <span class="text-lg font-bold text-gray-800 lg:text-xl">E-commerce Shopping - Console App</span>
+              <span class="text-gray-500">C++, Graphics C</span>
+            </div>
+          </a>
+        </div>
+        <!-- product - end -->
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="text-gray-400 bg-gray-900 body-font overflow-hidden">
+    <div class="container px-5 py-24 mx-auto">
+      <p class="mb-4 text-center text-4xl text-white sm:text-5xl md:mb-8">Education</p>
+      <div class="flex flex-wrap -m-12">
+        <div class="p-12 md:w-1/2 flex flex-col items-center">
+          <span
+            class="inline-block py-1 px-2 rounded bg-gray-800 text-blue-500 text-opacity-75 text-xs font-medium tracking-widest">Graduate
+            | Master's</span>
+          <h2 class="sm:text-3xl text-2xl title-font font-medium text-white mt-4 mb-4">Meng. Systems and Technology</h2>
+          <p class="leading-relaxed mb-8"><b> McMaster University </b>, Hamilton, ON, Canada</p>
+          <p class="leading-relaxed mb-8">Jan 2023 - Present | GPA: 3.9/4.0</p>
+        </div>
+        <div class="p-12 md:w-1/2 flex flex-col items-center">
+          <span
+            class="inline-block py-1 px-2 rounded bg-gray-800 text-blue-500 text-opacity-75 text-xs font-medium tracking-widest">Under-Graduate
+            | Bachelor's</span>
+          <h2 class="sm:text-3xl text-2xl title-font font-medium text-white mt-4 mb-4">B.Tech Computer Engineering</h2>
+          <p class="leading-relaxed mb-8"><b>Birla Vishwakarma Mahavidyalaya Eng. College</b> , Anand, GUJ, India</p>
+          <p class="leading-relaxed mb-8">June 2018 - June 2022 | GPA: 9.4/10.0</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="text-gray-400 bg-gray-900 body-font relative">
+    <div class="container px-5 py-15 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <p class="mb-4 text-center text-4xl text-white sm:text-5xl md:mb-8">Contact</p>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Schedule a quick meeting on my calender.</p>
+        <a href="https://calendar.app.google/t5zaXnkbvo8zA2iaA" target="_blank"><button
+            class="flex mx-auto mt-2 text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg">Schedule
+            a call!</button></a>
+        <p class="lg:w-2/3 mx-auto mt-5 leading-relaxed text-base">OR, Send a message below</p>
+
+
+      </div>
+      <div class="lg:w-1/2 md:w-2/3 mx-auto">
+        <div class="flex flex-wrap">
+          <form class="w-full max-w-lg flex flex-wrap mx-auto" action="https://formspree.io/f/mvoelneo" method="POST">
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="name" class="leading-7 text-sm text-gray-400">Name</label>
+                <input type="text" id="name" name="name"
+                  class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-blue-500 focus:bg-gray-900 focus:ring-2 focus:ring-blue-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+            </div>
+            <div class="p-2 w-1/2">
+              <div class="relative">
+                <label for="email" class="leading-7 text-sm text-gray-400">Email</label>
+                <input type="email" id="email" name="email"
+                  class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-blue-500 focus:bg-gray-900 focus:ring-2 focus:ring-blue-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              </div>
+            </div>
+            <div class="p-2 w-full">
+              <div class="relative">
+                <label for="message" class="leading-7 text-sm text-gray-400">Message</label>
+                <textarea id="message" name="message"
+                  class="w-full bg-gray-800 bg-opacity-40 rounded border border-gray-700 focus:border-blue-500 focus:bg-gray-900 focus:ring-2 focus:ring-blue-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+              </div>
+            </div>
+            <div class="p-2 w-full">
+              <input type="submit"
+                class="flex mx-auto text-white bg-blue-500 border-0 py-2 px-8 focus:outline-none hover:bg-blue-600 rounded text-lg" />
+            </div>
+          </form>
+          <div class="p-2 w-full pt-8 mt-8 border-t border-gray-800 text-center">
+            <a class="text-blue-400">jeetpandya1452001@email.com</a>
+            <p class="leading-normal my-5">All rights reserved @2024
+            </p>
+            <!-- <span class="inline-flex">
+                  <a class="text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                    </svg>
+                  </a>
+                  <a class="ml-4 text-gray-500">
+                    <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                    </svg>
+                  </a>
+                </span> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script>
+    function downloadResume() {
+      // Create a new link element
+      var link = document.createElement('a');
+
+      // Set the path of the link to the resume file
+      link.href = './statics/resume.pdf';
+      link.target = '_blank';
+
+      // Set the download attribute with the filename you want to use
+      link.download = 'Jeet_Pandya_Resume.pdf';
+
+      // Append the link to the body
+      document.body.appendChild(link);
+
+      // Programmatically click the link to trigger the download
+      link.click();
+
+      // Remove the link from the document
+      document.body.removeChild(link);
+    }
+  </script>
 </body>
+
 </html>
